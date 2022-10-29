@@ -1,0 +1,15 @@
+overlay = "."
+uploaders = [
+  "Ximin Luo <infinity0@debian.org>",
+  "Wolfgang Silbermayr <wolfgang@silbermayr.at>",
+]
+
+# The auto-generated summary is too long.
+summary = "Rust bindings to libc"
+
+[packages."lib+rustc-dep-of-std"]
+test_is_broken = true
+
+[packages."lib+const-extern-fn"]
+# requires a nightly compiler version
+test_is_broken = true

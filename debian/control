@@ -1,0 +1,88 @@
+Source: rust-libc
+Section: rust
+Priority: optional
+Build-Depends: debhelper (>= 12),
+ dh-cargo (>= 25),
+ cargo:native <!nocheck>,
+ rustc:native <!nocheck>,
+ libstd-rust-dev <!nocheck>
+Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+Uploaders:
+ Ximin Luo <infinity0@debian.org>,
+ Wolfgang Silbermayr <wolfgang@silbermayr.at>
+Standards-Version: 4.5.1
+Vcs-Git: https://salsa.debian.org/rust-team/debcargo-conf.git [src/libc]
+Vcs-Browser: https://salsa.debian.org/rust-team/debcargo-conf/tree/master/src/libc
+Homepage: https://github.com/rust-lang/libc
+Rules-Requires-Root: no
+
+Package: librust-libc-dev
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${misc:Depends}
+Suggests:
+ librust-libc+rustc-dep-of-std-dev (= ${binary:Version}),
+ librust-libc+rustc-std-workspace-core-dev (= ${binary:Version})
+Provides:
+ librust-libc+align-dev (= ${binary:Version}),
+ librust-libc+const-extern-fn-dev (= ${binary:Version}),
+ librust-libc+default-dev (= ${binary:Version}),
+ librust-libc+extra-traits-dev (= ${binary:Version}),
+ librust-libc+std-dev (= ${binary:Version}),
+ librust-libc+use-std-dev (= ${binary:Version}),
+ librust-libc-0-dev (= ${binary:Version}),
+ librust-libc-0+align-dev (= ${binary:Version}),
+ librust-libc-0+const-extern-fn-dev (= ${binary:Version}),
+ librust-libc-0+default-dev (= ${binary:Version}),
+ librust-libc-0+extra-traits-dev (= ${binary:Version}),
+ librust-libc-0+std-dev (= ${binary:Version}),
+ librust-libc-0+use-std-dev (= ${binary:Version}),
+ librust-libc-0.2-dev (= ${binary:Version}),
+ librust-libc-0.2+align-dev (= ${binary:Version}),
+ librust-libc-0.2+const-extern-fn-dev (= ${binary:Version}),
+ librust-libc-0.2+default-dev (= ${binary:Version}),
+ librust-libc-0.2+extra-traits-dev (= ${binary:Version}),
+ librust-libc-0.2+std-dev (= ${binary:Version}),
+ librust-libc-0.2+use-std-dev (= ${binary:Version}),
+ librust-libc-0.2.137-dev (= ${binary:Version}),
+ librust-libc-0.2.137+align-dev (= ${binary:Version}),
+ librust-libc-0.2.137+const-extern-fn-dev (= ${binary:Version}),
+ librust-libc-0.2.137+default-dev (= ${binary:Version}),
+ librust-libc-0.2.137+extra-traits-dev (= ${binary:Version}),
+ librust-libc-0.2.137+std-dev (= ${binary:Version}),
+ librust-libc-0.2.137+use-std-dev (= ${binary:Version})
+Description: Rust bindings to libc - Rust source code
+ This package contains the source for the Rust libc crate, packaged by debcargo
+ for use with cargo and dh-cargo.
+
+Package: librust-libc+rustc-dep-of-std-dev
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${misc:Depends},
+ librust-libc-dev (= ${binary:Version}),
+ librust-libc+align-dev (= ${binary:Version}),
+ librust-libc+rustc-std-workspace-core-dev (= ${binary:Version})
+Provides:
+ librust-libc-0+rustc-dep-of-std-dev (= ${binary:Version}),
+ librust-libc-0.2+rustc-dep-of-std-dev (= ${binary:Version}),
+ librust-libc-0.2.137+rustc-dep-of-std-dev (= ${binary:Version})
+Description: Rust bindings to libc - feature "rustc-dep-of-std"
+ This metapackage enables feature "rustc-dep-of-std" for the Rust libc crate, by
+ pulling in any additional dependencies needed by that feature.
+
+Package: librust-libc+rustc-std-workspace-core-dev
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${misc:Depends},
+ librust-libc-dev (= ${binary:Version}),
+ librust-rustc-std-workspace-core-1+default-dev
+Provides:
+ librust-libc-0+rustc-std-workspace-core-dev (= ${binary:Version}),
+ librust-libc-0.2+rustc-std-workspace-core-dev (= ${binary:Version}),
+ librust-libc-0.2.137+rustc-std-workspace-core-dev (= ${binary:Version})
+Description: Rust bindings to libc - feature "rustc-std-workspace-core"
+ This metapackage enables feature "rustc-std-workspace-core" for the Rust libc
+ crate, by pulling in any additional dependencies needed by that feature.
