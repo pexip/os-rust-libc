@@ -10,10 +10,11 @@ Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.ne
 Uploaders:
  Ximin Luo <infinity0@debian.org>,
  Wolfgang Silbermayr <wolfgang@silbermayr.at>
-Standards-Version: 4.5.1
+Standards-Version: 4.6.1
 Vcs-Git: https://salsa.debian.org/rust-team/debcargo-conf.git [src/libc]
 Vcs-Browser: https://salsa.debian.org/rust-team/debcargo-conf/tree/master/src/libc
 Homepage: https://github.com/rust-lang/libc
+X-Cargo-Crate: libc
 Rules-Requires-Root: no
 
 Package: librust-libc-dev
@@ -45,13 +46,13 @@ Provides:
  librust-libc-0.2+extra-traits-dev (= ${binary:Version}),
  librust-libc-0.2+std-dev (= ${binary:Version}),
  librust-libc-0.2+use-std-dev (= ${binary:Version}),
- librust-libc-0.2.137-dev (= ${binary:Version}),
- librust-libc-0.2.137+align-dev (= ${binary:Version}),
- librust-libc-0.2.137+const-extern-fn-dev (= ${binary:Version}),
- librust-libc-0.2.137+default-dev (= ${binary:Version}),
- librust-libc-0.2.137+extra-traits-dev (= ${binary:Version}),
- librust-libc-0.2.137+std-dev (= ${binary:Version}),
- librust-libc-0.2.137+use-std-dev (= ${binary:Version})
+ librust-libc-0.2.139-dev (= ${binary:Version}),
+ librust-libc-0.2.139+align-dev (= ${binary:Version}),
+ librust-libc-0.2.139+const-extern-fn-dev (= ${binary:Version}),
+ librust-libc-0.2.139+default-dev (= ${binary:Version}),
+ librust-libc-0.2.139+extra-traits-dev (= ${binary:Version}),
+ librust-libc-0.2.139+std-dev (= ${binary:Version}),
+ librust-libc-0.2.139+use-std-dev (= ${binary:Version})
 Description: Rust bindings to libc - Rust source code
  This package contains the source for the Rust libc crate, packaged by debcargo
  for use with cargo and dh-cargo.
@@ -67,7 +68,7 @@ Depends:
 Provides:
  librust-libc-0+rustc-dep-of-std-dev (= ${binary:Version}),
  librust-libc-0.2+rustc-dep-of-std-dev (= ${binary:Version}),
- librust-libc-0.2.137+rustc-dep-of-std-dev (= ${binary:Version})
+ librust-libc-0.2.139+rustc-dep-of-std-dev (= ${binary:Version})
 Description: Rust bindings to libc - feature "rustc-dep-of-std"
  This metapackage enables feature "rustc-dep-of-std" for the Rust libc crate, by
  pulling in any additional dependencies needed by that feature.
@@ -82,7 +83,7 @@ Depends:
 Provides:
  librust-libc-0+rustc-std-workspace-core-dev (= ${binary:Version}),
  librust-libc-0.2+rustc-std-workspace-core-dev (= ${binary:Version}),
- librust-libc-0.2.137+rustc-std-workspace-core-dev (= ${binary:Version})
+ librust-libc-0.2.139+rustc-std-workspace-core-dev (= ${binary:Version})
 Description: Rust bindings to libc - feature "rustc-std-workspace-core"
  This metapackage enables feature "rustc-std-workspace-core" for the Rust libc
  crate, by pulling in any additional dependencies needed by that feature.

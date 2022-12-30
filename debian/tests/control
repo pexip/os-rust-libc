@@ -1,49 +1,49 @@
-Test-Command: /usr/share/cargo/bin/cargo-auto-test libc 0.2.137 --all-targets --all-features
+Test-Command: /usr/share/cargo/bin/cargo-auto-test libc 0.2.139 --all-targets --all-features
 Features: test-name=rust-libc:@
 Depends: dh-cargo (>= 18), @
 Restrictions: allow-stderr, skip-not-installable, flaky
 
-Test-Command: /usr/share/cargo/bin/cargo-auto-test libc 0.2.137 --all-targets --no-default-features --features align
+Test-Command: /usr/share/cargo/bin/cargo-auto-test libc 0.2.139 --all-targets --no-default-features --features align
 Features: test-name=librust-libc-dev:align
 Depends: dh-cargo (>= 18), @
 Restrictions: allow-stderr, skip-not-installable
 
-Test-Command: /usr/share/cargo/bin/cargo-auto-test libc 0.2.137 --all-targets --no-default-features --features const-extern-fn
+Test-Command: /usr/share/cargo/bin/cargo-auto-test libc 0.2.139 --all-targets --no-default-features --features const-extern-fn
 Features: test-name=librust-libc-dev:const-extern-fn
 Depends: dh-cargo (>= 18), @
 Restrictions: allow-stderr, skip-not-installable, flaky
 
-Test-Command: /usr/share/cargo/bin/cargo-auto-test libc 0.2.137 --all-targets 
+Test-Command: /usr/share/cargo/bin/cargo-auto-test libc 0.2.139 --all-targets
 Features: test-name=librust-libc-dev:default
 Depends: dh-cargo (>= 18), @
 Restrictions: allow-stderr, skip-not-installable
 
-Test-Command: /usr/share/cargo/bin/cargo-auto-test libc 0.2.137 --all-targets --no-default-features --features extra_traits
+Test-Command: /usr/share/cargo/bin/cargo-auto-test libc 0.2.139 --all-targets --no-default-features --features extra_traits
 Features: test-name=librust-libc-dev:extra_traits
 Depends: dh-cargo (>= 18), @
 Restrictions: allow-stderr, skip-not-installable
 
-Test-Command: /usr/share/cargo/bin/cargo-auto-test libc 0.2.137 --all-targets --no-default-features --features std
+Test-Command: /usr/share/cargo/bin/cargo-auto-test libc 0.2.139 --all-targets --no-default-features --features std
 Features: test-name=librust-libc-dev:std
 Depends: dh-cargo (>= 18), @
 Restrictions: allow-stderr, skip-not-installable
 
-Test-Command: /usr/share/cargo/bin/cargo-auto-test libc 0.2.137 --all-targets --no-default-features --features use_std
+Test-Command: /usr/share/cargo/bin/cargo-auto-test libc 0.2.139 --all-targets --no-default-features --features use_std
 Features: test-name=librust-libc-dev:use_std
 Depends: dh-cargo (>= 18), @
 Restrictions: allow-stderr, skip-not-installable
 
-Test-Command: /usr/share/cargo/bin/cargo-auto-test libc 0.2.137 --all-targets --no-default-features
+Test-Command: /usr/share/cargo/bin/cargo-auto-test libc 0.2.139 --all-targets --no-default-features
 Features: test-name=librust-libc-dev:
 Depends: dh-cargo (>= 18), @
 Restrictions: allow-stderr, skip-not-installable
 
-Test-Command: /usr/share/cargo/bin/cargo-auto-test libc 0.2.137 --all-targets --no-default-features --features rustc-dep-of-std
+Test-Command: /usr/share/cargo/bin/cargo-auto-test libc 0.2.139 --all-targets --no-default-features --features rustc-dep-of-std
 Features: test-name=librust-libc+rustc-dep-of-std-dev:rustc-dep-of-std
 Depends: dh-cargo (>= 18), @
 Restrictions: allow-stderr, skip-not-installable, flaky
 
-Test-Command: /usr/share/cargo/bin/cargo-auto-test libc 0.2.137 --all-targets --no-default-features --features rustc-std-workspace-core
+Test-Command: /usr/share/cargo/bin/cargo-auto-test libc 0.2.139 --all-targets --no-default-features --features rustc-std-workspace-core
 Features: test-name=librust-libc+rustc-std-workspace-core-dev:rustc-std-workspace-core
 Depends: dh-cargo (>= 18), @
 Restrictions: allow-stderr, skip-not-installable
