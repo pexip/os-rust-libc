@@ -1,3 +1,9 @@
+rust-libc (0.2.139-1pexip1) pexip; urgency=medium
+
+  * New upstream release
+
+ -- Huw Jones <huw@pexip.com>  Thu, 16 Mar 2023 17:51:58 +0000
+
 rust-libc (0.2.139-1) unstable; urgency=medium
 
   * Team upload.
